@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-SymbolicName: net.sf.csv_export;singleton:=true
+Bundle-Version: 1.0.0
+Require-Bundle: org.eclipse.ui;bundle-version="[3.0.0,4.0.0)",
+ org.eclipse.core.runtime;bundle-version="[3.0.0,4.0.0)",
+ org.eclipse.search;bundle-version="[3.3.0,4.0.0)";visibility:=reexport,
+ org.eclipse.core.resources;bundle-version="[3.0.0,4.0.0)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: com.csvreader;version="[2.1.0,3.0.0)"
+Bundle-Activator: net.sf.csv_export.CsvExportPlugin
+Bundle-ActivationPolicy: lazy
+Export-Package: net.sf.csv_export

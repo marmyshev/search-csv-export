@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="searchResultProvider" name="%searchResultProviderPointName" schema="schema/searchResultProvider.exsd"/>
+   <extension
+         point="org.eclipse.ui.viewActions">
+      <viewContribution
+            id="net.sf.csv_export.SearchViewContribution"
+            targetID="org.eclipse.search.ui.views.SearchView">
+         <action
+               class="net.sf.csv_export.CsvExportAction"
+               icon="icons/csv_export.gif"
+               id="net.sf.csv_export.CsvExportAction"
+               label="%actionLabel"
+               toolbarPath="group1"
+               tooltip="%actionTooltip">
+         </action>
+      </viewContribution>
+   </extension>
+   <extension
+         point="net.sf.csv_export.searchResultProvider">
+      <labelProvider
+            class="net.sf.csv_export.TextSearchResultLabelProvider"
+            rank="100">
+      </labelProvider>
+   </extension>
+</plugin>

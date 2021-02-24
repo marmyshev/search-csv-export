@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Localization: plugin
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.csvreader
+Bundle-Version: 2.1
+Bundle-Vendor: %providerName
+Bundle-RequiredExecutionEnvironment: J2SE-1.4
+Export-Package: com.csvreader;version="2.1.0"
