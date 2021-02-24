@@ -1,17 +1,18 @@
 /*******************************************************************************
- * Copyright (c) 2012 Tobias Althoff, Ji-Seung Shin, Susanne Könning.
+ * Copyright (c) 2012 Tobias Althoff, Ji-Seung Shin, Susanne Kï¿½nning.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- * 	   Tobias Althoff, Ji-Seung Shin, Susanne Könning - initial implementation
+ * 	   Tobias Althoff, Ji-Seung Shin, Susanne Kï¿½nning - initial implementation
  *     Holger Voormann - enhancements
  *******************************************************************************/
 package net.sf.csv_export;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 import org.eclipse.jface.action.IAction;
 import org.eclipse.search.ui.ISearchResult;
@@ -83,7 +84,7 @@ public class CsvExportAction extends ActionDelegate implements
         // write to file
         Object[] resources = resultProvider.getResourcesWithHits(searchResult);
         try {
-            CsvWriter writer = new CsvWriter(path);
+            CsvWriter writer = new CsvWriter(path, ',', StandardCharsets.UTF_8);
 
             // TODO make following as preferences
             // writer.setDelimiter(';');
